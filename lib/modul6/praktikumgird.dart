@@ -26,7 +26,34 @@ class Praktikum6Page extends StatelessWidget {
           ),
           scrollDirection: Axis.vertical,
           physics: const NeverScrollableScrollPhysics(),
-          children: [],
+          children: [
+            tile(
+              Colors.blueAccent.shade400,
+              'assets/icon/boy.png',
+              'Kehadiran',
+            ),
+            tile(
+              Colors.greenAccent.shade400,
+              'assets/icon/timetable.png',
+              'Jadwal Kuliah',
+            ),
+            tile(
+              Colors.yellowAccent.shade400,
+              'assets/icon/homeschooling.png',
+              'Tugas',
+            ),
+            tile(
+              Colors.redAccent.shade400,
+              'assets/icon/features.png',
+              'Pengumuman',
+            ),
+            tile(Colors.purpleAccent.shade400, 'assets/icon/best.png', 'Nilai'),
+            tile(
+              Colors.tealAccent.shade400,
+              'assets/icon/pencil.png',
+              'Catatan',
+            ),
+          ],
         ),
       ),
     );

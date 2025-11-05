@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'praktikum.dart';
-import 'tugas.dart';
-import 'siezebox.dart';
+import 'package:modul_2/modul5/tugas.dart';
+import 'package:modul_2/modul6/praktikumlist.dart';
+import 'package:modul_2/modul5/siezebox.dart';
+import 'package:modul_2/modul6/tugas.dart';
+import 'praktikumgird.dart';
 
-class Modul5Page extends StatelessWidget {
-  const Modul5Page({super.key});
+class Modul6Page extends StatelessWidget {
+  const Modul6Page({super.key});
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Menu Modul 5'),
-        backgroundColor: Colors.amber,
+        title: const Text('Menu Modul 6'),
+        backgroundColor: Colors.lightBlue,
       ),
       body: Center(
         child: Column(
@@ -21,32 +22,32 @@ class Modul5Page extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const PraktikumPage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => Praktikum6Page()),
                 );
               },
-              child: const Text('Praktikum'),
+              child: const Text('Gird View'),
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const TugasPage()),
-                );
-              },
-              child: const Text('Tugas'),
-            ),
+
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SizedBoxDemo()),
+                  MaterialPageRoute(builder: (context) => ListPage()),
                 );
               },
-              child: const Text('SizeBox'),
+              child: const Text('List View'),
+            ),
+
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TugasPage2()),
+                );
+              },
+              child: const Text('GirdBuilder'),
             ),
           ],
         ),
